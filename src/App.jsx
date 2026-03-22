@@ -1,30 +1,10 @@
 import { useState } from 'react'
+import { useGithubData } from './hooks/useGithubData.js'
 import './App.css'
 
 function App() {
   const [username, setUsername] = useState('')
-  const [loading, setLoading] = useState(false)
-  const [error, setError] = useState('')
-  const [profile, setProfile] = useState(null)
-
-  const handleSearch = async (e) => {
-    e.preventDefault()
-    if (!username) return
-
-    setLoading(true)
-    setError('')
-    try {
-      // Placeholder - API impl later
-      const response = await fetch(`https://api.github.com/users/${username}`)
-      if (!response.ok) throw new Error('User not found')
-      const data = await response.json()
-      setProfile(data)
-    } catch (err) {
-      setError(err.message)
-    } finally {
-      setLoading(false)
-    }
-  }
+  const { data, loading, error } = useGithubData(username)
 
   return (
     <div className="app">
@@ -34,7 +14,7 @@ function App() {
       </header>
 
       <main className="main">
-        <form onSubmit={handleSearch} className="search-form">
+        <form onSubmit={(e) => { e.preventDefault(); if (username) setUsername(username.trim()) }} className="search-form">
           <input
             type="text"
             placeholder="Enter GitHub username (e.g., octocat)"
@@ -42,22 +22,36 @@ function App() {
             onChange={(e) => setUsername(e.target.value)}
             className="search-input"
           />
-          <button type="submit" disabled={loading} className="search-btn">
+          <button type="button" onClick={() => setUsername(username.trim())} disabled={!username || loading} className="search-btn">
             {loading ? 'Analyzing...' : 'Analyze'}
           </button>
         </form>
 
         {error && <div className="error">{error}</div>}
 
-        {profile && (
-          <div className="profile-card">
-            <img src={profile.avatar_url} alt={profile.login} className="avatar" />
-            <h2>{profile.name || profile.login}</h2>
-            <p>{profile.bio}</p>
-            <div className="stats">
-              <span>Repos: {profile.public_repos}</span>
-              <span>Followers: {profile.followers}</span>
-              <span>Following: {profile.following}</span>
+        {data && (
+          <div className="dashboard">
+            <div className="profile-card">
+              <img src={data.user.avatar_url} alt={data.user.login} className="avatar" />
+              <h2>{data.user.name || data.user.login}</h2>
+              <p>{data.user.bio || 'No bio available'}</p>
+              <div className="stats">
+                <span>Repos: {data.repos.length}</span>
+                <span>Followers: {data.user.followers}</span>
+                <span>Stars: {data.totalStars.toLocaleString()}</span>
+                <span>Level: <strong style={{color: '#4ecdc4'}}>{data.level}</strong> (Score: {data.score.toLocaleString()})</span>
+              </div>
+            </div>
+
+            <div className="repos-preview">
+              <h3>Recent Repos ({data.repos.length})</h3>
+              <ul>
+                {data.repos.map((repo) => (
+                  <li key={repo.id}>
+                    <strong>{repo.name}</strong> - Stars: {repo.stargazers_count} | Lang: {repo.language || 'N/A'} | Updated: {new Date(repo.updated_at).toLocaleDateString()}
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         )}
