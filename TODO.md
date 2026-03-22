@@ -11,21 +11,21 @@
 
 ## Day 2: Graphs + Analysis
 
-- [ ] Fetch repos data (GET /users/{username}/repos)
-- [ ] Fetch languages from repos
-- [ ] Calculate developer score (repos _ 2 + total_stars _ 3 + estimated_commits)
-- [ ] Display repo list (name, stars, forks, language, last updated)
-- [ ] Add charts: language pie, activity bar (commits/stars over repos)
-- [ ] Show developer level based on score (Junior, Strong Junior, Middle)
+- [x] Fetch repos data (GET /users/{username}/repos)
+- [x] Fetch languages from repos
+- [x] Calculate developer score (repos _ 2 + total_stars _ 3 + estimated_commits)
+- [x] Display repo list (name, stars, forks, language, last updated)
+- [x] Add charts: language pie, activity bar (commits/stars over repos)
+- [x] Show developer level based on score (Junior, Strong Junior, Middle)
 
 ## Day 3: Polish + Deploy
 
-- [ ] Improve UI: dashboard cards, responsive design, loading states, error handling
-- [ ] Add nice-to-haves if time: dark/light theme toggle
-- [ ] Write comprehensive README.md (features, screenshots, demo link)
-- [ ] Test locally
+- [x] Improve UI: dashboard cards, responsive design, loading states, error handling
+- [x] Add nice-to-haves if time: dark/light theme toggle
+- [x] Write comprehensive README.md (features, screenshots, demo link)
+- [x] Test locally
 - [ ] Deploy to Vercel
-- [ ] Update TODO with completion marks
+- [x] Update TODO with completion marks
 
 ## Future Enhancements (Post-MVP)
 
