@@ -1,17 +1,17 @@
 .app {
   min-height: 100vh;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
 }
 
 .header {
   margin-bottom: 3rem;
-  color: white;
+  color: #f0db4f;
 }
 
 .header h1 {
   font-size: 3rem;
   margin: 0 0 0.5rem;
-  background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+  background: linear-gradient(45deg, #f0db4f, #ffd700);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -20,6 +20,7 @@
 .header p {
   font-size: 1.2rem;
   opacity: 0.9;
+  color: #d4d4d4;
 }
 
 .search-form {
@@ -33,10 +34,18 @@
   flex: 1;
   padding: 1rem 1.5rem;
   font-size: 1.1rem;
-  border: none;
+  border: 2px solid #f0db4f;
   border-radius: 50px;
-  background: rgba(255, 255, 255, 0.9);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  background: #2a2a2a;
+  color: #e0e0e0;
+  box-shadow: 0 10px 30px rgba(240, 219, 79, 0.2);
+  transition: all 0.3s;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #ffd700;
+  box-shadow: 0 0 0 4px rgba(240, 219, 79, 0.2);
 }
 
 .search-btn {
@@ -45,41 +54,45 @@
   font-weight: bold;
   border: none;
   border-radius: 50px;
-  background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
-  color: white;
+  background: linear-gradient(45deg, #f0db4f, #ffd700);
+  color: #1a1a1a;
   cursor: pointer;
-  transition: transform 0.2s;
+  transition: all 0.3s;
+  box-shadow: 0 5px 15px rgba(240, 219, 79, 0.4);
 }
 
 .search-btn:hover:not(:disabled) {
   transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(240, 219, 79, 0.6);
 }
 
 .search-btn:disabled {
-  opacity: 0.7;
+  opacity: 0.6;
   cursor: not-allowed;
 }
 
 .error {
-  background: #ff4757;
-  color: white;
+  background: linear-gradient(45deg, #6b6b6b, #8a8a8a);
+  color: #fff;
   padding: 1rem 2rem;
   border-radius: 10px;
   margin: 1rem 0;
   max-width: 500px;
   margin-left: auto;
   margin-right: auto;
+  border-left: 4px solid #f0db4f;
 }
 
 .profile-card {
-  background: rgba(255, 255, 255, 0.95);
+  background: linear-gradient(145deg, #2a2a2a, #1f1f1f);
+  border: 1px solid #404040;
   backdrop-filter: blur(20px);
   border-radius: 20px;
   padding: 3rem;
   max-width: 500px;
   margin: 0 auto;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-  color: #333;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+  color: #e0e0e0;
 }
 
 .avatar {
@@ -87,18 +100,20 @@
   height: 120px;
   border-radius: 50%;
   margin-bottom: 1.5rem;
-  border: 5px solid #4ecdc4;
+  border: 4px solid #f0db4f;
+  box-shadow: 0 8px 25px rgba(240, 219, 79, 0.3);
 }
 
 .profile-card h2 {
   margin: 0 0 1rem;
   font-size: 2rem;
+  color: #f0db4f;
 }
 
 .profile-card p {
   margin: 0 0 2rem;
   opacity: 0.8;
-  font-size: 1.1rem;
+  color: #c0c0c0;
 }
 
 .stats {
@@ -107,13 +122,14 @@
   justify-content: center;
   font-size: 1.2rem;
   font-weight: bold;
+  padding: 1.5rem;
+  background: rgba(240, 219, 79, 0.1);
+  border-radius: 12px;
+  border: 1px solid #f0db4f20;
 }
 
-.stats span {
-  background: linear-gradient(45deg, #667eea, #764ba2);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+.stats span strong {
+  color: #ffd700;
 }
 
 .main {
@@ -132,4 +148,38 @@
     flex-direction: column;
     gap: 1rem;
   }
+}
+
+/* Dark theme enhancements */
+.dark .app {
+  background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
+}
+
+.dark .profile-card {
+  background: linear-gradient(145deg, #1a1a1a, #121212);
+  border-color: #333;
+}
+
+.dark .search-input {
+  background: #1a1a1a;
+  color: #f0f0f0;
+  border-color: #f0db4f;
+}
+
+/* Chart containers */
+.chart-container,
+.repos-section {
+  background: linear-gradient(145deg, #2a2a2a, #1f1f1f);
+  border: 1px solid #404040;
+  color: #e0e0e0;
+}
+
+.repo-card {
+  background: rgba(240, 219, 79, 0.05);
+  border: 1px solid #f0db4f20;
+  color: #d4d4d4;
+}
+
+.repo-card h4 {
+  color: #f0db4f;
 }
