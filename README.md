@@ -1,8 +1,17 @@
 # 🚀 GitHub Dev Analyzer
 
+**🌐 Live Demo:** [github-analyzer-matafeii-matafeiis-projects.vercel.app](https://github-analyzer-matafeii-matafeiis-projects.vercel.app)
+
 [![Vercel](https://thereverie.s3.amazonaws.com/vercel.svg)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fmatafeii%2Fgithub-analyzer)
 
 A modern React dashboard to analyze GitHub developer profiles. Enter a username to see profile stats, repo activity, top languages, dev score & level.
+
+**New Features:**
+
+- Epic 4K code background
+- Clickable repo links to GitHub
+- Enhanced fonts (Poppins + JetBrains Mono)
+- Theme toggle removed for cleaner UI
 
 ## ✨ Features
 
@@ -13,13 +22,16 @@ A modern React dashboard to analyze GitHub developer profiles. Enter a username 
 - **Charts** - Кольцевая диаграмма Top Languages + столбчатая активность (stars/forks)
 - **Full Stats** - общее количество языков и доли с процентами
 - **Search UX** - минимум 3 символа + 500ms debounce
-- **Dark/Light Theme** - переключатель, сохраняет выбор
+- **Immersive 4K Code Background**
+- **Clickable Repos** - direct GitHub links
+- **Premium Typography** - Poppins + JetBrains Mono
 - **Responsive Dashboard** - адаптивный дизайн (desktop/mobile)
 - **Rate-limit safe** - GitHub REST API (axios)
 
 ## 🎮 Live Demo
 
 **🚀 Live on Vercel:**
+
 - https://github-analyzer-hdce2uw0g-matafeiis-projects.vercel.app
 - https://github-analyzer-silk-pi.vercel.app
 
