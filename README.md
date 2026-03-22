@@ -1,6 +1,10 @@
 # 🚀 GitHub Dev Analyzer
 
-[![Vercel](https://thereverie.s3.amazonaws.com/vercel.svg)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fmatafeii%2Fgithub-analyzer)
+👉 https://github-analyzer-silk-pi.vercel.app
+
+🧪 Alternative Deployment
+
+github-analyzer-5wpvtaizv-matafeiis-projects.vercel.app
 
 A modern React dashboard to analyze GitHub developer profiles. Enter a username to see profile stats, repo activity, top languages, dev score & level.
 
