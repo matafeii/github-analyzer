@@ -54,6 +54,12 @@ function App() {
           </button>
         </form>
 
+        {username.trim().length > 0 && username.trim().length < 3 && (
+          <div className="hint">
+            📝 Введите минимум 3 символа для поиска
+          </div>
+        )}
+
         {error && <div className="error">{error}</div>}
 
         {data && (

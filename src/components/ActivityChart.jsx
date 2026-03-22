@@ -28,16 +28,16 @@ const ActivityChart = ({ repos }) => {
       {
         label: 'Stars',
         data: repos.slice(0, 10).map(repo => repo.stargazers_count),
-        backgroundColor: 'rgba(75, 192, 192, 0.6)',
-        borderColor: 'rgba(75, 192, 192, 1)',
-        borderWidth: 1,
+        backgroundColor: 'rgba(240, 230, 140, 0.6)',
+        borderColor: 'rgba(212, 175, 55, 1)',
+        borderWidth: 2,
       },
       {
         label: 'Forks',
         data: repos.slice(0, 10).map(repo => repo.forks_count),
-        backgroundColor: 'rgba(255, 99, 132, 0.6)',
-        borderColor: 'rgba(255, 99, 132, 1)',
-        borderWidth: 1,
+        backgroundColor: 'rgba(168, 168, 168, 0.6)',
+        borderColor: 'rgba(128, 128, 128, 1)',
+        borderWidth: 2,
       },
     ],
   };
@@ -48,11 +48,34 @@ const ActivityChart = ({ repos }) => {
       title: {
         display: true,
         text: 'Repo Activity (Top 10)',
+        color: '#d4af37',
+        font: {
+          size: 14,
+        },
+      },
+      legend: {
+        labels: {
+          color: '#d0d0d0',
+        },
       },
     },
     scales: {
       y: {
         beginAtZero: true,
+        ticks: {
+          color: '#a8a8a8',
+        },
+        grid: {
+          color: 'rgba(212, 175, 55, 0.1)',
+        },
+      },
+      x: {
+        ticks: {
+          color: '#a8a8a8',
+        },
+        grid: {
+          color: 'rgba(212, 175, 55, 0.1)',
+        },
       },
     },
   };

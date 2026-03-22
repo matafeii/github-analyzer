@@ -16,14 +16,14 @@ const LanguageChart = ({ languages }) => {
       label: '# Repos',
       data: Object.values(languages).slice(0, 6),
       backgroundColor: [
-        '#FF6384',
-        '#36A2EB',
-        '#FFCE56',
-        '#4BC0C0',
-        '#9966FF',
-        '#FF9F40'
+        '#d4af37',
+        '#f0e68c',
+        '#c19a6b',
+        '#a8a8a8',
+        '#8b8b8b',
+        '#707070'
       ],
-      borderColor: '#fff',
+      borderColor: '#0a0a0a',
       borderWidth: 2,
     }],
   };
@@ -33,11 +33,28 @@ const LanguageChart = ({ languages }) => {
     plugins: {
       legend: {
         position: 'bottom',
+        labels: {
+          color: '#d0d0d0',
+          font: {
+            size: 12,
+          },
+        },
       },
       title: {
         display: true,
-        text: 'Top Languages'
-      }
+        text: 'Top Languages',
+        color: '#d4af37',
+        font: {
+          size: 14,
+        },
+      },
+      tooltip: {
+        backgroundColor: 'rgba(20, 20, 20, 0.8)',
+        titleColor: '#d4af37',
+        bodyColor: '#d0d0d0',
+        borderColor: '#d4af37',
+        borderWidth: 1,
+      },
     },
   };
 

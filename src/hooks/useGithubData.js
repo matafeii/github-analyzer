@@ -8,7 +8,11 @@ export const useGithubData = (username) => {
   const [error, setError] = useState('')
 
   useEffect(() => {
-    if (!username) return
+    // Минимум 3 символа для поиска
+    if (!username || username.trim().length < 3) {
+      setData(null)
+      return
+    }
 
     const loadData = async () => {
       setLoading(true)
@@ -47,7 +51,12 @@ export const useGithubData = (username) => {
       }
     }
 
-    loadData()
+    // Debouncing - ждём 500ms после последнего ввода
+    const debounceTimer = setTimeout(() => {
+      loadData()
+    }, 500)
+
+    return () => clearTimeout(debounceTimer)
   }, [username])
 
   return { data, loading, error }
