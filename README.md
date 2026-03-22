@@ -6,22 +6,26 @@ A modern React dashboard to analyze GitHub developer profiles. Enter a username 
 
 ## ✨ Features
 
-- **Profile Analysis** - Avatar, bio, stats (repos, stars, followers)
-- **Developer Score** - Algorithmic score (repos ×2 + stars ×3 + commits estimate)
+- **Profile Analysis** - Avatar, bio, location, website, Twitter, stats (repos, gists, stars, followers, following)
+- **Developer Score** - Algorithm (repos ×2 + stars ×3 + estimated commits)
 - **Dev Level** - Junior / Strong Junior / Middle / Senior
-- **Repo List** - Top recent repos with stars, forks, lang, desc
-- **Charts** - Language pie chart, activity bar (stars/forks)
-- **Dark/Light Theme** - Auto-save preference
-- **Responsive Dashboard** - Mobile-friendly
-- **Rate-limit safe** - Uses public GitHub API
+- **Repo List** - Расширенный список (stars, forks, watchers, issues, size, last updated, visible/private)
+- **Charts** - Кольцевая диаграмма Top Languages + столбчатая активность (stars/forks)
+- **Full Stats** - общее количество языков и доли с процентами
+- **Search UX** - минимум 3 символа + 500ms debounce
+- **Dark/Light Theme** - переключатель, сохраняет выбор
+- **Responsive Dashboard** - адаптивный дизайн (desktop/mobile)
+- **Rate-limit safe** - GitHub REST API (axios)
 
 ## 🎮 Live Demo
 
-**[🚀 Live on Vercel: https://github-analyzer-matafeii.vercel.app/](https://github-analyzer-matafeii.vercel.app/)**
+**🚀 Live on Vercel:**
+- https://github-analyzer-hdce2uw0g-matafeiis-projects.vercel.app
+- https://github-analyzer-silk-pi.vercel.app
 
-Also available on [GitHub Pages](https://matafeii.github.io/github-analyzer/)
+Also available on GitHub Pages: https://matafeii.github.io/github-analyzer/
 
-Try: `torvalds`, `octocat`, `vercel`, your username!
+Try: `torvalds`, `octocat`, `vercel`, `javascript`, ваш ник! (например `matafeii`)
 
 ## 📱 Screenshot
 
