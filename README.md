@@ -1,16 +1,6 @@
-github-analyzer-matafeii-matafeiis-projects.vercel.app
-
-> > > > > > > # ef8bfc0862662070b24471d5e581e44072e28c8c
-
 # 🚀 GitHub Dev Analyzer
 
-**🌐 Live Demo:** [github-analyzer-matafeii-matafeiis-projects.vercel.app](https://github-analyzer-matafeii-matafeiis-projects.vercel.app)
-
-# [![Vercel](https://thereverie.s3.amazonaws.com/vercel.svg)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fmatafeii%2Fgithub-analyzer)
-
-github-analyzer-matafeii-matafeiis-projects.vercel.app
-
-> > > > > > > ef8bfc0862662070b24471d5e581e44072e28c8c
+[![Vercel](https://thereverie.s3.amazonaws.com/vercel.svg)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fmatafeii%2Fgithub-analyzer)
 
 A modern React dashboard to analyze GitHub developer profiles. Enter a username to see profile stats, repo activity, top languages, dev score & level.
 
@@ -70,11 +60,27 @@ npm run dev
 
 Open http://localhost:5173
 
-## 🌐 Deploy to Vercel (1-click)
+## 🌐 Vercel Deployment (done)
 
-1. [Deploy button](#) or Vercel dashboard
-2. Import repo
-3. Done! Custom domain optional.
+Проект уже развернут и привязан к репозиторию:
+
+- GitHub repository: https://github.com/matafeii/github-analyzer
+- Vercel project: https://vercel.com/matafeiis-projects/github-analyzer
+
+Проверки выполнены:
+
+1. Connect Git Repository – ✅ (через `vercel` CLI проект связан)
+2. Add Custom Domain – в Vercel можно добавить собственный домен в настройках проекта (например `github-analyzer.yourdomain.com`) и привязать DNS
+3. Preview Deployment – ✅ PR/Preview автоматически создаются при push (Vercel автоматически)
+4. Enable Web Analytics – в Vercel Dashboard → Analytics → включить (по умолчанию доступно)
+5. Enable Speed Insights – на странице проекта Vercel есть вкладка `Insights` / `Core Web Vitals`
+
+**Active Production URLs:**
+
+- https://github-analyzer-hdce2uw0g-matafeiis-projects.vercel.app
+- https://github-analyzer-silk-pi.vercel.app
+
+Добавлена демка для Verified URL, готово к использованию.
 
 ## 📈 Dev Score Formula
 
