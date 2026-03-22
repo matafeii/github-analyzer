@@ -44,19 +44,35 @@ const ActivityChart = ({ repos }) => {
 
   const options = {
     responsive: true,
+    maintainAspectRatio: true,
     plugins: {
       title: {
         display: true,
-        text: 'Repo Activity (Top 10)',
+        text: '📊 Repository Activity (Top 10)',
         color: '#d4af37',
         font: {
-          size: 14,
+          size: 16,
+          weight: 'bold',
         },
+        padding: 20,
       },
       legend: {
+        position: 'top',
         labels: {
           color: '#d0d0d0',
+          font: {
+            size: 12,
+          },
+          padding: 15,
         },
+      },
+      tooltip: {
+        backgroundColor: 'rgba(20, 20, 20, 0.9)',
+        titleColor: '#d4af37',
+        bodyColor: '#d0d0d0',
+        borderColor: '#d4af37',
+        borderWidth: 1,
+        padding: 12,
       },
     },
     scales: {
@@ -64,6 +80,9 @@ const ActivityChart = ({ repos }) => {
         beginAtZero: true,
         ticks: {
           color: '#a8a8a8',
+          font: {
+            size: 11,
+          },
         },
         grid: {
           color: 'rgba(212, 175, 55, 0.1)',
@@ -72,18 +91,19 @@ const ActivityChart = ({ repos }) => {
       x: {
         ticks: {
           color: '#a8a8a8',
+          font: {
+            size: 10,
+          },
         },
         grid: {
-          color: 'rgba(212, 175, 55, 0.1)',
+          color: 'rgba(212, 175, 55, 0.05)',
         },
       },
     },
   };
 
   return (
-    <div className="chart-container">
-      <Bar options={options} data={data} />
-    </div>
+    <Bar options={options} data={data} />
   );
 };
 

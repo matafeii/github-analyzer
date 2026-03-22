@@ -73,12 +73,16 @@ function App() {
                 reposCount={data.repos.length}
               />
               
-              <LanguageChart languages={data.languages} />
-              
-              <ActivityChart repos={data.repos} />
-              
-              <RepoList repos={data.repos} />
+              <div className="chart-container language-chart">
+                <LanguageChart languages={data.languages} />
+              </div>
             </div>
+
+            <div className="chart-container activity-chart">
+              <ActivityChart repos={data.repos} />
+            </div>
+            
+            <RepoList repos={data.repos} />
           </div>
         )}
       </main>
