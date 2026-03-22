@@ -1,6 +1,6 @@
 .app {
   min-height: 100vh;
-  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0f0f0f 100%);
+  background: transparent;
 }
 
 .header {
@@ -348,21 +348,7 @@
   }
 }
 
-/* Dark theme enhancements */
-.dark .app {
-  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
-}
-
-.dark .profile-card {
-  background: linear-gradient(145deg, #1a1a1a, #0f0f0f);
-  border-color: #2a2a2a;
-}
-
-.dark .search-input {
-  background: #1f1f1f;
-  color: #f0f0f0;
-  border-color: #d4af37;
-}
+/* Legacy dark theme removed */
 
 /* Chart containers */
 .chart-container {
@@ -481,6 +467,15 @@
   align-items: center;
   gap: 1rem;
   flex-wrap: wrap;
+}
+
+.repo-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.repo-link:hover h4 {
+  color: #f0e68c;
 }
 
 .repo-card-detailed h4 {

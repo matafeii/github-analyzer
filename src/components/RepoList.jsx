@@ -1,6 +1,6 @@
 import React from 'react'
 
-const RepoList = ({ repos }) => {
+const RepoList = ({ repos, username }) => {
   const languageColors = {
     'JavaScript': '#f1e05a',
     'TypeScript': '#3178c6',
@@ -34,7 +34,15 @@ const RepoList = ({ repos }) => {
             <div key={repo.id} className="repo-card-detailed">
               <div className="repo-header-section">
                 <div className="repo-title-group">
-                  <h4>{repo.name}</h4>
+                  <a 
+                    href={`https://github.com/${username}/${repo.name}`} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="repo-link"
+                    style={{ color: 'inherit', textDecoration: 'none' }}
+                  >
+                    <h4>{repo.name}</h4>
+                  </a>
                   {repo.language && (
                     <span className="lang-badge" style={{ backgroundColor: langColor }}>
                       ● {repo.language}

@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import ThemeToggle from './components/ThemeToggle.jsx'
 import ProfileCard from './components/ProfileCard.jsx'
 import RepoList from './components/RepoList.jsx'
 import LanguageChart from './components/LanguageChart.jsx'
@@ -14,10 +13,7 @@ function App() {
   if (loading) return (
     <div className="app">
       <header className="header">
-        <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '1rem'}}>
-          <h1>🚀 GitHub Dev Analyzer</h1>
-          <ThemeToggle />
-        </div>
+        <h1>🚀 GitHub Dev Analyzer</h1>
       </header>
       <main className="main">
         <div className="loading">Analyzing profile... 🔍</div>
@@ -28,10 +24,7 @@ function App() {
   return (
     <div className="app">
       <header className="header">
-        <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '1rem'}}>
-          <h1>🚀 GitHub Dev Analyzer</h1>
-          <ThemeToggle />
-        </div>
+        <h1>🚀 GitHub Dev Analyzer</h1>
         <p>Analyze developer profiles & get insights</p>
       </header>
 
@@ -82,7 +75,7 @@ function App() {
               <ActivityChart repos={data.repos} />
             </div>
             
-            <RepoList repos={data.repos} />
+            <RepoList repos={data.repos} username={username} />
           </div>
         )}
       </main>

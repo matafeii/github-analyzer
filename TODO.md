@@ -1,37 +1,24 @@
-# GitHub Dev Analyzer - Development TODO
+# GitHub Analyzer Enhancement TODO
 
-## Day 1: UI + Search + Basic Data Fetch
+## Status: Completed ✅
 
-- [x] Setup Vite + React project
-- [x] Install dependencies: axios, chart.js, react-chartjs-2
-- [x] Create basic UI structure (App layout: header, search input, profile section)
-- [x] Implement username search form
-- [x] Fetch GitHub user data (GET /users/{username})
-- [x] Display profile card (avatar, name, bio, repos count, etc.)
+**Completed:**
 
-## Day 2: Graphs + Analysis
+- [x] Create TODO.md
+- [x] Update index.html (add Google Fonts: JetBrains Mono, Poppins)
+- [x] Update src/index.css (4K code background, overlay, Poppins font, remove theme classes)
+- [x] Update src/App.css (.app transparent bg, remove .dark rules, add .repo-link styles)
+- [x] Update src/App.jsx (remove ThemeToggle import/uses, add username prop to RepoList)
+- [x] Update src/components/RepoList.jsx (add username prop, wrap repo name in GitHub link)
+- [x] Theme toggle fully removed (component unused, CSS cleaned)
 
-- [x] Fetch repos data (GET /users/{username}/repos)
-- [x] Fetch languages from repos
-- [x] Calculate developer score (repos _ 2 + total_stars _ 3 + estimated_commits)
-- [x] Display repo list (name, stars, forks, language, last updated)
-- [x] Add charts: language pie, activity bar (commits/stars over repos)
-- [x] Show developer level based on score (Junior, Strong Junior, Middle)
+**Final Results:**
 
-## Day 3: Polish + Deploy
+- **Cool 4K code background:** Fixed Unsplash 4K code image with dark overlay.
+- **Theme toggle removed:** No more dark/light switch.
+- **Repo clicks open GitHub:** Repo names are now clickable links to full repo pages.
+- **Improved fonts:** Poppins + JetBrains Mono loaded, applied for better readability/hierarchy.
 
-- [x] Improve UI: dashboard cards, responsive design, loading states, error handling
-- [x] Add nice-to-haves if time: dark/light theme toggle
-- [x] Write comprehensive README.md (features, screenshots, demo link)
-- [x] Test locally
-- [x] Deploy to Vercel ✅ https://github-analyzer-matafeii.vercel.app
-- [x] Update TODO with completion marks
+**Test:** Dev server auto-reloads (http://localhost:5173/). Enter a GitHub username (e.g., 'octocat' or 'torvalds'), verify background, fonts, no toggle, click repo names to open GitHub.
 
-## Future Enhancements (Post-MVP)
-
-- [ ] Compare two users
-- [ ] Repo filters (stars, language)
-- [ ] Personalized recommendations (e.g., "Add READMEs", "Increase activity")
-- [ ] AI analysis (via external API)
-
-Progress: Ready to start after structure approval.
+All changes live via HMR. Project enhanced as requested.
