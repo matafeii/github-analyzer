@@ -24,7 +24,7 @@
 - [x] Add nice-to-haves if time: dark/light theme toggle
 - [x] Write comprehensive README.md (features, screenshots, demo link)
 - [x] Test locally
-- [x] Deploy to Vercel (GitHub Pages)
+- [x] Deploy to Vercel ✅ https://github-analyzer-matafeii.vercel.app
 - [x] Update TODO with completion marks
 
 ## Future Enhancements (Post-MVP)

@@ -17,7 +17,9 @@ A modern React dashboard to analyze GitHub developer profiles. Enter a username 
 
 ## 🎮 Live Demo
 
-**[🚀 Live: https://matafeii.github.io/github-analyzer/](https://matafeii.github.io/github-analyzer/)**
+**[🚀 Live on Vercel: https://github-analyzer-matafeii.vercel.app/](https://github-analyzer-matafeii.vercel.app/)**
+
+Also available on [GitHub Pages](https://matafeii.github.io/github-analyzer/)
 
 Try: `torvalds`, `octocat`, `vercel`, your username!
 
