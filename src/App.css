@@ -103,6 +103,39 @@
   margin-left: auto;
   margin-right: auto;
   border-left: 4px solid #d4af37;
+  text-align: center;
+}
+
+.error.not-found {
+  background: linear-gradient(45deg, #ff6b6b, #ee5a52);
+  border-left-color: #ff4757;
+}
+
+.error.not-found h3 {
+  margin: 0 0 0.5rem;
+  color: #fff;
+}
+
+.error.not-found p {
+  margin: 0 0 1rem;
+  opacity: 0.9;
+}
+
+.error.not-found button {
+  background: linear-gradient(45deg, #d4af37, #f0e68c);
+  color: #0a0a0a;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+
+.error.not-found button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
 }
 
 .profile-card {

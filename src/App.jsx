@@ -8,7 +8,8 @@ import './App.css'
 
 function App() {
   const [username, setUsername] = useState('')
-  const { data, loading, error } = useGithubData(username)
+  const [isSearching, setIsSearching] = useState(false)
+  const { data, loading, error } = useGithubData(username, isSearching)
 
   if (loading) return (
     <div className="app">
@@ -39,11 +40,12 @@ function App() {
             disabled={loading}
           />
           <button 
-            type="submit" 
-            disabled={!username.trim() || loading} 
+            type="button"
+            disabled={!username.trim() || loading || isSearching} 
             className="search-btn"
+            onClick={() => setIsSearching(true)}
           >
-            Analyze
+            {isSearching ? '🔍 Анализ...' : 'Analyze'}
           </button>
         </form>
 
@@ -53,7 +55,21 @@ function App() {
           </div>
         )}
 
-        {error && <div className="error">{error}</div>}
+        {error && (
+          <div className="error not-found">
+            <h3>👤 Пользователь не найден</h3>
+            <p>Проверьте правильность написания никнейма.</p>
+            <button 
+              className="search-btn"
+              onClick={() => {
+                setUsername('')
+                setIsSearching(false)
+              }}
+            >
+              🔍 Новый поиск
+            </button>
+          </div>
+        )}
 
         {data && (
           <div className="dashboard">

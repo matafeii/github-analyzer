@@ -2,15 +2,17 @@ import { useState, useEffect } from 'react'
 import { fetchUser, fetchRepos } from '../utils/githubApi.js'
 import { calculateDevScore, getDevLevel, estimateCommits } from '../utils/scoreCalculator.js'
 
-export const useGithubData = (username) => {
+export const useGithubData = (username, isSearching) => {
   const [data, setData] = useState(null)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
 
   useEffect(() => {
-    // Минимум 3 символа для поиска
-    if (!username || username.trim().length < 3) {
+    // Check isSearching first
+    if (!isSearching || !username || username.trim().length < 3) {
       setData(null)
+      setError('')
+      setLoading(false)
       return
     }
 
