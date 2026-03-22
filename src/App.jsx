@@ -36,7 +36,7 @@ function App() {
       </header>
 
       <main className="main">
-        <form className="search-form" onSubmit={(e) => { e.preventDefault(); setUsername(username.trim()) }}>
+        <form className="search-form" onSubmit={(e) => { e.preventDefault(); }}>
           <input
             type="text"
             placeholder="Enter GitHub username (e.g., octocat)"
