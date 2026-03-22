@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const API_BASE = 'https://api.github.com'
+const API_BASE = '/api/github'
 
 export const fetchUser = async (username) => {
   const response = await axios.get(`${API_BASE}/users/${username}`)

@@ -53,13 +53,8 @@ export const useGithubData = (username, isSearching) => {
       }
     }
 
-    // Debouncing - ждём 500ms после последнего ввода
-    const debounceTimer = setTimeout(() => {
-      loadData()
-    }, 500)
-
-    return () => clearTimeout(debounceTimer)
-  }, [username])
+    loadData()
+  }, [username, isSearching])
 
   return { data, loading, error }
 }
